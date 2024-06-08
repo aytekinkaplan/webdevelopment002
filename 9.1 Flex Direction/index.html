@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Direction</title>
+    <!-- HINT:
+  https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors
+  https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators 
+  -->
+    <style>
+      .container {
+        color: white;
+        border: 5px solid gold;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        height: 100vh;
+        padding: 10px;
+        background-color: #22254b;
+        font-size: 30px;
+        font-weight: bold;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+
+        /*
+        Select all the elements that are the direct
+        children of the .container class.
+        */
+      }
+
+      .container > * {
+        flex-basis: 100px;
+      }
+
+      .container > div {
+        width: 100px;
+        height: 100px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+      }
+
+      .container > div:hover {
+        opacity: 0.5;
+        cursor: pointer;
+      }
+
+      .container > div:active {
+        opacity: 1;
+        cursor: pointer;
+      }
+
+      .container > div:target {
+        opacity: 1;
+        cursor: pointer;
+      }
+
+      .container > div:visited {
+        opacity: 1;
+        cursor: pointer;
+      }
+
+      /*
+Select all the elements that are the direct
+children of the .container class.
+    */
+
+      .red {
+        background-color: #eb4d4b;
+      }
+      .orange {
+        background-color: #f0932b;
+      }
+      .yellow {
+        background-color: #f6e58d;
+      }
+      .green {
+        background-color: #6ab04c;
+      }
+      .blue {
+        background-color: #4834d4;
+      }
+      .indigo {
+        background-color: #30336b;
+      }
+      .purple {
+        background-color: #be2edd;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="red">Red</div>
+      <div class="orange">Orange</div>
+      <div class="yellow">Yellow</div>
+      <div class="green">Green</div>
+      <div class="blue">Blue</div>
+      <div class="indigo">Indigo</div>
+      <div class="purple">Purple</div>
+    </div>
+  </body>
+</html>
